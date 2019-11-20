@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>Home</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="core/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="core/css/style.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="core/css/role.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="core/css/datatables.min.css" crossorigin="anonymous"/>
+    <!-- Font Awesome JS -->
+    <script src="core/js/solid.js" crossorigin="anonymous"></script>
+    <script src="core/js/fontawesome.js"  crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="wrapper">
+
+    <!--Sidebar-->
+    <div th:replace="fragments/sidebar :: sidebar"/>
+    <!--sidebar-->
+
+    <!-- Page Content  -->
+    <div id="content">
+
+        <!--header-->
+        <div th:replace="fragments/header :: header"/>
+
+        <!-- content-->
+        <div layout:fragment="content"/>
+
+    </div>
+</div>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" crossorigin="anonymous">
+<script src="core/js/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="core/js/popper.min.js" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="core/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!-- Bootstrap datatable js-->
+<script src="core/js/datatables.min.js" crossorigin="anonymous"></script>
+<!--custom users.js -->
+<script src="core/js/users.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

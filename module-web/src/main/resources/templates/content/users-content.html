@@ -1,0 +1,46 @@
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+    <head>
+        <title th:utext="${title}"></title>
+    </head>
+    <body>
+    <div layout:fragment="content">
+
+            <h3 class="alert alert-info">Users Information</h3>
+
+            <button class="btn btn-primary">
+                <span class="fa fa-edit"></span>
+                Add Users
+            </button>
+
+        <br/>
+        <br/>
+
+        <div class="page-header">
+            <table class="table table-bordered table-hover table-striped" id="tabelUsersInfo">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th width="25%">Name</th>
+                        <th width="25%">Username</th>
+                        <th width="25%">Status</th>
+                        <th width="25%">Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <th>ID</th>
+                        <th width="25%">Name</th>
+                        <th width="25%">Username</th>
+                        <th width="25%">Status</th>
+                        <th width="25%">Action</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+    </body>
+</html>

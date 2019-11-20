@@ -1,0 +1,42 @@
+<!-- Sidebar  -->
+<nav th:fragment="sidebar" id="sidebar" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="sidebar-header">
+        <h3>SKK MIGAS AUDIT TRAIL</h3>
+    </div>
+
+    <ul class="list-unstyled components">
+        <p>Menu</p>
+        <li class="active">
+            <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle" aria-expanded="false">Data Master</a>
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a th:href="@{/role}">Role</a>
+                </li>
+                <li>
+                    <a th:href="@{/users}">Users Info</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Product</a>
+        </li>
+        <li>
+            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Report</a>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                    <a href="#">Transaction</a>
+                </li>
+                <li>
+                    <a href="#">Return</a>
+                </li>
+                <li>
+                    <a href="#">Inventory</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+    </ul>
+</nav>
+<!--sidebar-->
