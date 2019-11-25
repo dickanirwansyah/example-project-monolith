@@ -1,5 +1,6 @@
 package com.dicka.appinventory.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -26,5 +27,6 @@ public class Role implements Serializable {
     private String name;
 
     @OneToMany(mappedBy = "role")
+    @JsonIgnore
     private Set<UsersRole> usersRoles;
 }
