@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @RestControllerAdvice
 public class GlobalRestExceptionHandler extends ResponseEntityExceptionHandler {
 
-    /** 500 */
+    /** 500 internal server error */
     @ExceptionHandler(Exception.class)
     public ResponseEntity<CustomErrorResponse> handleInternalServerError(Exception e, WebRequest request){
         CustomErrorResponse errorResponse = new CustomErrorResponse();
@@ -28,7 +28,7 @@ public class GlobalRestExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    /** 404 **/
+    /** 404  not found rest api global**/
     @ExceptionHandler(ResourceNotFoundException.class)
     protected ResponseEntity<CustomErrorResponse> handleNotFoundException(ResourceNotFoundException ex, WebRequest webRequest) throws IOException {
         CustomErrorResponse errorResponse = new CustomErrorResponse();
@@ -38,7 +38,7 @@ public class GlobalRestExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
 
-    /** 409 **/
+    /** 409 conflict data rest api global **/
     @ExceptionHandler(ResourceIsExistingException.class)
     protected ResponseEntity<CustomErrorResponse> handleResourceExisting(ResourceIsExistingException ex, WebRequest webRequest) throws IOException{
         CustomErrorResponse errorResponse = new CustomErrorResponse();

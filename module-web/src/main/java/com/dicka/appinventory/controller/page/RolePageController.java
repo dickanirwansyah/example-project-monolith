@@ -12,6 +12,7 @@ public class RolePageController {
     public ModelAndView getRoleInfo(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("content/role-content");
+        modelAndView.addObject("activeClass", "active");
         modelAndView.addObject("title", "Role Information");
         return modelAndView;
     }

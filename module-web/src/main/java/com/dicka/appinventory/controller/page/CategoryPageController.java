@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping
-public class CategoryController {
+public class CategoryPageController {
 
     @GetMapping(value = "/category")
     public ModelAndView getCategory(){

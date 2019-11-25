@@ -8,12 +8,15 @@
         <p>Menu</p>
         <li class="active">
             <a href="#homeSubmenu" data-toggle="collapse" class="dropdown-toggle" aria-expanded="false">Data Master</a>
-            <ul class="collapse list-unstyled" id="homeSubmenu">
-                <li>
+            <ul class="collapse list-unstyled"  id="homeSubmenu">
+                <li th:classappend="${#httpServletRequest.getRequestURI()=='/role' ? 'active':''}">
                     <a th:href="@{/role}">Role</a>
                 </li>
                 <li>
                     <a th:href="@{/users}">Users Info</a>
+                </li>
+                <li>
+                    <a th:href="@{/category}">Category Product</a>
                 </li>
             </ul>
         </li>

@@ -1,10 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="UTF-8"/>
+    <title>Category Product</title>
 </head>
 <body>
-$END$
+    <div layout:fragment="content">
+        <h3 class="alert alert-info">Category Information</h3>
+        <div class="row">
+            <div class="col-4">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="namecategory">NAME </label>
+                        <input type="text" class="form-control" id="namecategory" placeholder="enter name of category"/>
+                        <small class="form-text text-muted">*mandatory name category*</small>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">
+                            <span class="fa fa-plus"></span> Save
+                        </button>
+                        <button class="btn btn-primary">
+                            <span class="fa fa-edit"></span>
+                            Update
+                        </button>
+                        <button class="btn btn-danger">
+                            <span class="fa fa-times"></span> Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-7">
+                <table class="table table-hover table-striped table-bordered" id="tabel-category">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

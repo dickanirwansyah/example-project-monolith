@@ -10,8 +10,8 @@
     <div layout:fragment="content">
         <h3 class="alert alert-info">Role Information</h3>
         <div class="row">
-            <div class="col-5">
-                <form class="form-horizontal">
+            <div class="col-4">
+                <form class="form-horizontal" id="formrole">
                     <div class="form-group">
                         <label for="idrole">ID ROLE</label>
                         <input type="text" class="form-control" id="idrole" placeholder="enter id role"/>
@@ -22,14 +22,19 @@
                         <input type="text" class="form-control" id="namerole" placeholder="enter name role"/>
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-primary getSaveRole">
                             <span class="fa fa-plus"></span> Save
+                        </button>
+                        <button type="button" class="btn btn-primary getUpdateRole">
+                            <span class="fa fa-edit"></span> Update
+                        </button>
+                        <button type="button" class="btn btn-danger getCancelRole">
+                            <span class="fa fa-times"></span> Cancel
                         </button>
                     </div>
                 </form>
             </div>
-            <div class="col-6">
-                <br/>
+            <div class="col-7">
                 <table class="table table-hover table-striped" id="tabelrole">
                     <thead>
                         <tr>
@@ -38,50 +43,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>r001</td>
-                            <td>Sys-Admin</td>
-                            <td>
-                                <button class="btn btn-primary">
-                                    <span class="fa fa-edit"></span>
-                                    Detail
-                                </button>&nbsp;
-                                <button class="btn btn-danger">
-                                    <span class="fa fa-edit"></span>
-                                    Disable
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>r002</td>
-                            <td>Staff</td>
-                            <td>
-                                <button class="btn btn-primary">
-                                    <span class="fa fa-edit"></span>
-                                    Detail
-                                </button>&nbsp;
-                                <button class="btn btn-danger">
-                                    <span class="fa fa-edit"></span>
-                                    Disable
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>r003</td>
-                            <td>Manager</td>
-                            <td>
-                                <button class="btn btn-primary">
-                                    <span class="fa fa-edit"></span>
-                                    Detail
-                                </button>&nbsp;
-                                <button class="btn btn-danger">
-                                    <span class="fa fa-edit"></span>
-                                    Disable
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <tbody></tbody>
                     <tfoot>
                         <tr>
                             <th>ID</th>
